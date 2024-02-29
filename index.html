@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Assessment para Modalidade de Licitação</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Formulário de Assessment para Modalidade de Licitação</h1>
+  <form id="form-assessment">
+    <p>
+      **1. Qual a natureza do bem ou serviço a ser contratado?**
+    </p>
+    <select id="natureza" name="natureza" required>
+      <option value="">Selecione...</option>
+      <option value="bens_comuns">Bens comuns</option>
+      <option value="bens_complexos">Bens ou serviços com especificações complexas</option>
+      <option value="obras">Obras e serviços de engenharia</option>
+      <option value="alienacao">Alienação de bens</option>
+      <option value="projetos">Projetos de arquitetura e urbanismo</option>
+      <option value="inovacao">Soluções inovadoras para problemas da Administração Pública</option>
+    </select>
+    <p>
+      **2. Qual o valor estimado da contratação?**
+    </p>
+    <input type="number" id="valor_estimado" name="valor_estimado" required>
+    <p>
+      **3. A licitação é urgente?**
+    </p>
+    <div class="radio-group">
+      <input type="radio" id="urgencia_sim" name="urgencia" value="sim" checked>
+      <label for="urgencia_sim">Sim</label>
+      <input type="radio" id="urgencia_nao" name="urgencia" value="nao">
+      <label for="urgencia_nao">Não</label>
+    </div>
+    <p>
+      **4. A licitação envolve:**
+    </p>
+    <div class="checkbox-group">
+      <input type="checkbox" id="complexidade" name="complexidade">
+      <label for="complexidade">Complexidade</label>
+      <input type="checkbox" id="inovacao" name="inovacao">
+      <label for="inovacao">Inovação</label>
+    </div>
+    <p>
+      **5. Qual o critério de julgamento desejado?**
+    </p>
+    <select id="criterio" name="criterio" required>
+      <option value="">Selecione...</option>
+      <option value="menor_preco">Menor preço</option>
+      <option value="melhor_tecnica">Melhor técnica ou conteúdo artístico</option>
+      <option value="maior_retorno">Maior retorno econômico</option>
+    </select>
+    <p>
+      **6. Você possui conhecimento sobre as modalidades de licitação?**
+    </p>
+    <div class="radio-group">
+      <input type="radio" id="conhecimento_sim" name="conhecimento" value="sim" checked>
+      <label for="conhecimento_sim">Sim</label>
+      <input type="radio" id="conhecimento_nao" name="conhecimento" value="nao">
+      <label for="conhecimento_nao">Não</label>
+    </div>
+    <p>
+      **7. Deseja consultar a legislação específica sobre licitações?**
+    </p>
+    <div class="radio-group">
+      <input type="radio" id="legislacao_sim" name="legislacao" value="sim" checked>
+      <label for="legislacao_sim">Sim</label>
+      <input type="radio" id="legislacao_nao" name="legislacao" value="nao">
+      <label for="legislacao_nao">Não</label>
+    </div>
+    <button type="submit">Enviar</button>
+    <button type="button" id="limpar">Limpar</button>
+  </form>
+
+  <div id="resultado"></div>
+
+  <div id="links"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

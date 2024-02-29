@@ -73,10 +73,11 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
 
-    // Exibir a modalidade de licitação
+    // Exibir a modalidade de licitação com a variável ${modalidade} em caixa alta
     const resultado = document.getElementById('resultado');
-    resultado.innerHTML = `<strong>A modalidade de licitação mais adequada é: ${modalidade}</strong>`;
+    resultado.innerHTML = `<strong>A modalidade de licitação mais adequada é: <span style="font-weight: bold; text-transform: uppercase;">${modalidade}</span></strong>`;
 
+    
     // Exibir links se as condições forem atendidas
     if (conhecimento === 'nao' && legislacao === 'sim') {
       linksDiv.innerHTML = `
